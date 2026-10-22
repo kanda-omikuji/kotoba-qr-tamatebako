@@ -10,5 +10,5 @@
 const GOLD_CARD=25;
 const start=document.getElementById('start'), result=document.getElementById('result');
 const button=document.getElementById('draw');let drawn=false;
-button.addEventListener('click',()=>{if(drawn)return;drawn=true;button.disabled=true;const n=Math.floor(Math.random()*25)+1;const file=String(n).padStart(2,'0');const img=document.getElementById('fortune');img.src='images/'+file+'.gif';img.alt='ラッキーワードカード '+file;document.getElementById('card').classList.toggle('gold',n===GOLD_CARD);img.onerror=()=>{img.alt='画像が見つかりません：images/'+file+'.gif';};start.classList.add('hidden');result.classList.remove('hidden');window.scrollTo(0,0);});
+button.addEventListener('click',()=>{if(drawn)return;drawn=true;button.disabled=true;const n=Math.floor(Math.random()*25)+1;const file=String(n).padStart(2,'0');const img=document.getElementById('fortune');img.src=''+file+'.gif';img.alt='ラッキーワードカード '+file;document.getElementById('card').classList.toggle('gold',n===GOLD_CARD);img.onerror=()=>{img.alt='画像が見つかりません：'+file+'.gif';};start.classList.add('hidden');result.classList.remove('hidden');window.scrollTo(0,0);});
 </script></body></html>
