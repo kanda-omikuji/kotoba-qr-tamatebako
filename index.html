@@ -40,17 +40,18 @@
 
 @keyframes goldenFlash {
   0% {
-    opacity: 0;
+    opacity: 1;
     transform: scaleX(0);
   }
-  25% {
+  65% {
     opacity: 1;
+    transform: scaleX(2.5);
   }
   100% {
     opacity: 0;
     transform: scaleX(2.5);
   }
-}/* スマートフォンでは金色の光を長くする */
+}
 @media (max-width: 600px) {
   .golden-ray::after {
     width: 150vw;
