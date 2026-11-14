@@ -50,6 +50,14 @@
     opacity: 0;
     transform: scaleX(2.5);
   }
+}/* スマートフォンでは金色の光を長くする */
+@media (max-width: 600px) {
+  .golden-ray::after {
+    width: 150vw;
+    max-width: none;
+    height: 14px;
+    top: -7px;
+  }
 }</style></head><body><main>
 <section id="start" class="cover"><img class="cover-image" src="tamatebako.png" alt="ことばのQR玉手箱。豪華な玉手箱とラッキーワードガチャの案内"><button id="draw" class="image-button" aria-label="ラッキーワードガチャを回そう！"><span class="sr-only">ラッキーワードガチャを回そう！</span></button></section>
 <section id="result" class="hidden" aria-live="polite"><h1>ことばのQR玉手箱</h1><p class="stars">✦ ✧ ✦</p><div id="card" class="result"><img id="fortune" alt="今日のラッキーワードのカード"></div><p>📸 気に入った言葉は、スクリーンショットで保存してね！</p><p class="back">もう一度遊ぶときは、QRコードを読み直してね。</p></section>
